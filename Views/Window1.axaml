@@ -1,0 +1,90 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
+		Width="500"
+		Height="400"
+        x:Class="ADSAvaloniaPractice.Views.Window1"
+        Title="Tree Structure">
+
+	<Grid RowDefinitions="Auto,*,*">
+
+		<!--Back button and title-->
+		<Grid Grid.Row="0" Height="40">
+			<Button Click="ReturnButton_Clicked" Height="30" Width="65" HorizontalAlignment="Left" VerticalAlignment="Top">Return</Button>
+			<Label HorizontalAlignment="Center">Tree structure</Label>
+		</Grid>
+
+		<!--Add and remove node-->
+		<Grid Grid.Row="1" Background="#DEDEDE" >
+
+			<Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*">
+
+				<!--Add Node-->
+				<Label Grid.Row="0" Grid.Column ="0" VerticalAlignment="Center">Add node</Label>
+
+				<!--New node-->
+				<Grid Grid.Row="0" Grid.Column="1" RowDefinitions="*,*">
+					<Label Grid.Row="0" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" >New node</Label>
+					<TextBox Name="NewNode_TextBox" Grid.Row="1" Watermark="Node Num" FontSize="12" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="40" Width="85"></TextBox>
+				</Grid>
+
+				<!--Father-->
+				<Grid Grid.Row="0" Grid.Column="2" RowDefinitions="*,*">
+					<Label Grid.Row="0" HorizontalAlignment="Center" VerticalContentAlignment="Bottom">Father</Label>
+					<TextBox Name="Father_TextBox" Grid.Row="1" Watermark="Node Num" FontSize="12" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="40" Width="85"></TextBox>
+				</Grid>
+
+				<!--Position-->
+				<Grid Grid.Row="0" Grid.Column="3" RowDefinitions="*,*">
+					<Label Grid.Row="0" HorizontalAlignment="Center" VerticalContentAlignment="Bottom">Position</Label>
+					<ComboBox Name="Position_ComboBox" Grid.Row="1" SelectedIndex="0" HorizontalAlignment="Center">
+						<ComboBoxItem>Left</ComboBoxItem>
+						<ComboBoxItem>Right</ComboBoxItem>
+					</ComboBox>
+				</Grid>
+
+				<!--"Add" button-->
+				<Button Name="Add_Button" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="60" Click="AddButton_Clicked">Add</Button>
+
+				<!--Delete node-->
+				<Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" >Delete node</Label>
+
+				<!--Select node-->
+				<Grid Grid.Row="1" Grid.Column="2" RowDefinitions="*,*">
+					<Label Grid.Row="0" VerticalContentAlignment="Bottom">Select node</Label>
+					<TextBox Name="DeleteSelectNode_TextBox" Grid.Row="1" Watermark="Node Num" FontSize="12" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+				</Grid>
+				
+				<!--"Delete" button-->
+				<Button Grid.Row="1" Grid.Column="4" Click="DeleteButton_Clicked" VerticalAlignment="Center">Delete</Button>
+			</Grid>
+			
+		</Grid>
+
+		<!--Height and search node-->
+		<Grid Grid.Row="3" Background="#DEDEDE" RowDefinitions="*,*">
+			<Grid ColumnDefinitions="*,*,*,*,*,*">
+				<Button Grid.Column="0" Click="HeightButton_Clicked" VerticalAlignment="Center" HorizontalAlignment="Right">Print Height</Button>
+				<Label Grid.Column="1" Name="height_label" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"> 0 </Label>
+				<Button Grid.Column="2" Click="SearchButton_Clicked" HorizontalAlignment="Right">Search</Button>
+				<TextBox Name="Search_TextBox" Grid.Column="3" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="20" Watermark="Node Num"></TextBox>
+				<Button Click="TransverseButton_Clicked" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right"> Transverse</Button>
+				<ComboBox Name="Transverse_ComboBox" Grid.Column="5" HorizontalAlignment="Left" VerticalAlignment="Center" SelectedIndex="0">
+					<ComboBoxItem>Inorder</ComboBoxItem>
+					<ComboBoxItem>Preorder</ComboBoxItem>
+					<ComboBoxItem>Postorder</ComboBoxItem>
+				</ComboBox>
+				
+			</Grid>
+
+			<!--UI Console-->
+			<Grid Grid.Row="1" ColumnDefinitions="*,*,*,*">
+				<Label Grid.Column="0" VerticalAlignment="Center">Console:</Label>
+				<Label Grid.Column="2" VerticalAlignment="Center" Name="ConsoleUI" Width="350"></Label>
+			</Grid>
+
+		</Grid>
+	</Grid>
+</Window>

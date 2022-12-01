@@ -1,0 +1,75 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
+        Width="500"
+		Height="400"
+		x:Class="ADSAvaloniaPractice.Views.GraphWindow"
+        Title="Graph Structure">
+	<Grid RowDefinitions="Auto,*,*,*,*,*,*,*">
+
+		<!--Back button and title-->
+		<Grid Grid.Row="0" Height="40">
+			<Button Click="ReturnButton_Clicked" Height="30" Width="65" HorizontalAlignment="Left" VerticalAlignment="Top">Return</Button>
+			<Label HorizontalAlignment="Center">Graph structure</Label>
+		</Grid>
+
+		<!--Add Node section-->
+		<Grid Grid.Row="1" ColumnDefinitions="*,*,*,*" Background="#DEDEDE">
+			<Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Add node</Label>
+
+
+
+			<Button Click="AddNode_Button" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">Add</Button>
+
+
+		</Grid>
+
+		<!--Add Edge section-->
+		<Grid Grid.Row="2" RowDefinitions="*,*" ColumnDefinitions="*,*,*,*,*" Background="#DEDEDE">
+			<Label Grid.Row="0" Grid.Column="0">Add edge</Label>
+			<Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center">Start</Label>
+			<TextBox Name="StartNode_TextBox" Grid.Row="1" Grid.Column="1" Watermark="Node num" Height="20" Width="90"></TextBox>
+			<Label Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">End</Label>
+			<TextBox Name="EndNode_TextBox" Grid.Row="1" Grid.Column="2" Watermark="Node num" Height="20" Width="90"></TextBox>
+			<Label Grid.Row="0" Grid.Column="3" VerticalAlignment="Bottom" HorizontalAlignment="Center">Weight</Label>
+			<TextBox Name="Weight_TextBox" Grid.Row="1" Grid.Column="3" Watermark="Node num" Height="20" Width="90"></TextBox>
+			<Button Click="AddEdge_Button" Grid.Row="0" Grid.Column="4">Add</Button>
+		</Grid>
+
+		<!--Delete node section-->
+		<Grid Grid.Row="3" RowDefinitions="*,*" ColumnDefinitions="*,*,*,*,*" Background="#DEDEDE">
+		
+		</Grid>
+
+		<!--Delete edge section-->
+		<Grid Grid.Row="4" RowDefinitions="*,*" ColumnDefinitions="*,*,*,*,*" Background="#DEDEDE">
+
+		
+			
+		</Grid>
+		<!--Transverse and search section-->
+		<Grid Grid.Row="5" ColumnDefinitions="*,*,*,*,*,*" Background="#DEDEDE">
+			<Label Grid.Column="0" VerticalAlignment="Center">Shortest path</Label>
+			<Grid Grid.Column="1" RowDefinitions="*,*">
+				<Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Destiny</Label>
+				<TextBox Name="Destiny_TextBox" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Watermark="Node num"></TextBox>
+			</Grid>
+			<Button Click="ShortestPathButton_Clicked" Grid.Column="2" VerticalAlignment="Center">Print</Button>
+			
+		</Grid>
+		<!--Longest algoritm section-->
+		<Grid Grid.Row="6" ColumnDefinitions="*,*,*" Background="#DEDEDE">
+			<Label Grid.Column="0">Longest path</Label>
+			<TextBox Name="LongDestiny_TextBox" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Watermark="Node num"></TextBox>
+			<Button Click="LongestButton_Clicked" Grid.Column="2" >Print</Button>
+		</Grid>
+		<!--Console section-->
+		<Grid Grid.Row="7" ColumnDefinitions="*,*,*,*" Background="#DEDEDE">
+			<Label Grid.Column="0" VerticalAlignment="Center">Console:</Label>
+			<Label Name="ConsoleUI" Grid.Column="2" VerticalAlignment="Center" Width="500"></Label>
+		</Grid>
+	</Grid>
+</Window>
+

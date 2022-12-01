@@ -1,0 +1,26 @@
+is_global = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ADSAvaloniaPractice
+build_property.ProjectDir = C:\Users\Usuario\source\repos\ADSAvaloniaPractice2\ADSAvaloniaPractice\
+
+[C:/Users/Usuario/source/repos/ADSAvaloniaPractice2/ADSAvaloniaPractice/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Usuario/source/repos/ADSAvaloniaPractice2/ADSAvaloniaPractice/Views/GraphWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Usuario/source/repos/ADSAvaloniaPractice2/ADSAvaloniaPractice/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Usuario/source/repos/ADSAvaloniaPractice2/ADSAvaloniaPractice/Views/Window1.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

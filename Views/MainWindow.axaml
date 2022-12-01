@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ADSAvaloniaPractice.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
+		Width="500"
+		Height="400"
+        x:Class="ADSAvaloniaPractice.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ADSAvaloniaPractice">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	<Grid RowDefinitions="Auto,*,Auto">
+		<!-- Title -->
+		<Grid Grid.Row="0" Background="#DEDEDE">
+			<Label Height="120" VerticalContentAlignment="Bottom" FontStyle="Italic" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center">Advanced data structure project</Label>
+			
+		</Grid>
+
+
+		<Grid Grid.Row="1">
+			<Label FontSize="50" Height="150" HorizontalAlignment="Center" VerticalContentAlignment="Center" >Trees and graphs</Label>
+		</Grid>
+
+		<!-- Button -->
+		<Grid Grid.Row="2" Background="#DEDEDE" Height="140"  RowDefinitions="Auto,*">
+			<Grid Height="40" Grid.Row="0">
+				<Label HorizontalAlignment="Center" VerticalContentAlignment="Center">Select the structure that you want to work with</Label>
+			</Grid>
+			<Grid Grid.Row="1" ColumnDefinitions="*,*">
+				<Button Click="TreeButton_Clicked" Grid.Column="0" Height="40" Width="90" HorizontalContentAlignment="Center" Background="White" HorizontalAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" >Trees</Button>
+				<Button Click="GraphButton_Clicked" Grid.Column="1" Height="40" Width="90" HorizontalContentAlignment="Center" Background="White" HorizontalAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" >Graph</Button>
+			</Grid>
+
+		</Grid>
+	</Grid>
+
+</Window>
